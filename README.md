@@ -26,6 +26,17 @@ turret types are planned for later, heavier progression.
 2. Install [SuperbWarfare](https://modrinth.com/mod/superb-warfare) first
 3. Drop this mod's jar into your `mods` folder
 
+## Building from source
+This project depends on the SuperbWarfare jar as a local file dependency
+(`compileOnly files("libs/superbwarfare-0.8.9-final-mc1.21.1-9b5284f4.jar")`
+in `build.gradle`), it is not pulled from a Maven repository, so it is not
+included in this repository.
+
+To build from source:
+1. Download SuperbWarfare 0.8.9 from [Modrinth](https://modrinth.com/mod/superb-warfare).
+2. Place the jar file in the `libs/` folder at the project root.
+3. Run the Gradle build as usual.
+
 ## License
 This mod's code is licensed under GPL-3.0 (see LICENSE), consistent with its
 dependency on SuperbWarfare's GPL-3.0-licensed codebase
