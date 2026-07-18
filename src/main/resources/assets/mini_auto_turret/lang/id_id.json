@@ -1,0 +1,10 @@
+{
+  "entity.mini_auto_turret.turret_m60": "Turret Sentry M60",
+  "item.mini_auto_turret.turret_m60_deployer": "Turret Sentry M60",
+  "item.mini_auto_turret.turret_m60_deployer.desc": "M60 kompak di atas tripod. Isi Rifle Ammo, aktifkan pakai Monitor, biarkan dia yang bicara.",
+  "itemGroup.mini_auto_turret.main": "Mini Auto Turret",
+  "weapon.mini_auto_turret.m60": "M60 7.62mm",
+
+  "advancements.mini_auto_turret.get_turret.title": "Mesin Demokrasi",
+  "advancements.mini_auto_turret.get_turret.description": "Craft Turret Sentry M60 pertamamu"
+}

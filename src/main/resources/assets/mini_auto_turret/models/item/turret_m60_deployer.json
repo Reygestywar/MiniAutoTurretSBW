@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mini_auto_turret:item/turret_m60_deployer"
+  }
+}

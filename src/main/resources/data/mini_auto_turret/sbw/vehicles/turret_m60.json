@@ -1,0 +1,71 @@
+{
+  "MaxHealth": 60,
+  "KeepChunkLoaded": false,
+  "TurretPos": [0, 0.344, 0.125],
+  "TurretTurnSpeed": [25, 25],
+  "TurretPitchRange": [-60, 80],
+  "BarrelPos": [0, 0.234, 0],
+  "Seats": {
+    "HidePassenger": false,
+    "Transform": "Turret",
+    "Position": [-0.1, -0.904, -0.725],
+    "MinPitch": -30,
+    "MaxPitch": 60,
+    "Weapons": ["Main"]
+  },
+  "SeekInfo": {
+    "MinSeekRange": 0.5,
+    "MaxSeekRange": 32,
+    "ChangeTargetTime": 40,
+    "SeekIterative": 20,
+    "MinTargetSize": 0.1,
+    "SeekEnergyCost": 0
+  },
+  "Weapons": {
+    "Main": {
+      "Icon": "superbwarfare:textures/overlay/vehicle/weapon/icons/gun_7_62mm.png",
+      "Name": "weapon.mini_auto_turret.m60",
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Projectile": "superbwarfare:projectile",
+      "AmmoType": "@RifleAmmo",
+      "RPM": 600,
+      "Damage": 9.5,
+      "BypassesArmor": 0.3,
+      "Velocity": 30,
+      "Gravity": 0,
+      "Spread": 0.5,
+      "HeatPerShoot": 4,
+      "NaturalCooldown": 1,
+      "ShootAnimationTime": 1,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCnHpjZooming",
+      "SeekWeaponInfo": {
+        "SeekDirection": "Barrel",
+        "SeekRange": 32,
+        "SeekAngle": 20,
+        "SeekTime": 10,
+        "MinTargetSize": 0.1,
+        "OnlyLockEntity": true,
+        "CalculateTrajectory": false
+      },
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:m_60_fire_1p",
+        "Fire3P": "superbwarfare:m_60_fire_3p",
+        "Fire3PFar": "superbwarfare:m_60_far",
+        "Fire3PVeryFar": "superbwarfare:m_60_veryfar"
+      },
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [[0, 0.06, 0.4]],
+        "Directions": ["Barrel"]
+      },
+      "SoundRadius": 24
+    }
+  },
+  "HasLowHealthWarning": false,
+  "SelfHurtPercent": 0,
+  "VehicleContainerType": "Small",
+  "EngineType": "Fixed",
+  "Type": "Defense"
+}

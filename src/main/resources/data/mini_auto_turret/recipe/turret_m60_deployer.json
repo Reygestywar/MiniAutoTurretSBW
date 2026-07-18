@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": { "item": "minecraft:comparator" },
+    "b": { "item": "superbwarfare:m_60" },
+    "c": { "item": "minecraft:redstone" },
+    "d": { "item": "superbwarfare:mortar_bipod" },
+    "e": { "tag": "superbwarfare:storage_blocks/steel" },
+    "f": { "tag": "superbwarfare:storage_blocks/steel" },
+    "g": { "tag": "superbwarfare:storage_blocks/steel" }
+  },
+  "pattern": [
+    "ab ",
+    "cd ",
+    "efg"
+  ],
+  "result": {
+    "id": "superbwarfare:container",
+    "count": 1,
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "superbwarfare:container",
+        "EntityType": "mini_auto_turret:turret_m60"
+      }
+    }
+  }
+}
