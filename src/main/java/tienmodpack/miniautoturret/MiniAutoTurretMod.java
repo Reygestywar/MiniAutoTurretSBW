@@ -9,13 +9,14 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import tienmodpack.miniautoturret.entity.TurretM60Entity;
 import tienmodpack.miniautoturret.item.TurretM60DeployerItem;
@@ -26,8 +27,8 @@ public class MiniAutoTurretMod {
     public static final String MODID = "mini_auto_turret";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final DeferredRegister.Items ITEMS =
-            DeferredRegister.createItems(MODID);
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(Registries.ENTITY_TYPE, MODID);
@@ -35,20 +36,20 @@ public class MiniAutoTurretMod {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final DeferredHolder<EntityType<?>, EntityType<TurretM60Entity>> TURRET_M60 =
+    public static final RegistryObject<EntityType<TurretM60Entity>> TURRET_M60 =
             ENTITY_TYPES.register("turret_m60",
                     () -> EntityType.Builder
                             .of(TurretM60Entity::new, MobCategory.MISC)
                             .sized(0.8F, 0.8F)
                             .build("turret_m60"));
 
-    public static final DeferredItem<TurretM60DeployerItem> TURRET_M60_DEPLOYER =
+    public static final RegistryObject<TurretM60DeployerItem> TURRET_M60_DEPLOYER =
             ITEMS.register("turret_m60_deployer",
                     () -> new TurretM60DeployerItem(
                             new Item.Properties().stacksTo(1)
                     ));
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB =
+    public static final RegistryObject<CreativeModeTab> MAIN_TAB =
             CREATIVE_TABS.register("main",
                     () -> CreativeModeTab.builder()
                             .title(Component.literal("Mini Auto Turret"))
@@ -61,13 +62,14 @@ public class MiniAutoTurretMod {
                             })
                             .build());
 
-    public MiniAutoTurretMod(IEventBus modBus, ModContainer container) {
+    public MiniAutoTurretMod() {
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ITEMS.register(modBus);
         ENTITY_TYPES.register(modBus);
         CREATIVE_TABS.register(modBus);
 
-        container.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         LOGGER.info("Mini Auto Turret Loaded.");
     }

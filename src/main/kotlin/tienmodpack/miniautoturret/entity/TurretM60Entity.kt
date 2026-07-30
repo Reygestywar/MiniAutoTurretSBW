@@ -3,9 +3,9 @@ package tienmodpack.miniautoturret.entity
 import com.atsuishio.superbwarfare.entity.vehicle.base.AutoAimableEntity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.level.Level
-import software.bernie.geckolib.animation.AnimatableManager
-import software.bernie.geckolib.animation.AnimationController
-import software.bernie.geckolib.animation.RawAnimation
+import software.bernie.geckolib.core.animation.AnimatableManager
+import software.bernie.geckolib.core.animation.AnimationController
+import software.bernie.geckolib.core.animation.RawAnimation
 
 class TurretM60Entity(
     type: EntityType<out AutoAimableEntity>,

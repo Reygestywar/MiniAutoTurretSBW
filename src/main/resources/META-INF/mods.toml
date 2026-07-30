@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="mini_auto_turret"
+version="1.0.0"
+displayName="[SBW] Mini Auto Turret"
+description='''
+Adds a craftable M60 sentry turret. Requires SuperbWarfare.
+'''
+
+[[dependencies.mini_auto_turret]]
+modId="forge"
+mandatory=true
+type="required"
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mini_auto_turret]]
+modId="minecraft"
+mandatory=true
+type="required"
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mini_auto_turret]]
+modId="superbwarfare"
+mandatory=true
+type="required"
+reason="Mini Auto Turret is an addon that requires SuperbWarfare's vehicle and turret system."
+versionRange="[0.8.9,)"
+ordering="AFTER"
+side="BOTH"
