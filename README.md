@@ -9,10 +9,24 @@ defense turrets, built as an addon for
 The first turret is an M60-based sentry for cheap early-game defense. More
 turret types are planned for later, heavier progression.
 
+Available for both NeoForge 1.21.1 and Forge 1.20.1.
+
 ## Requirements
-- Minecraft 1.21.1
+
+**NeoForge 1.21.1**
 - NeoForge 21.1.235+
-- SuperbWarfare 0.8.9+ (**required**, this mod does not work standalone)
+- SuperbWarfare 0.8.9+
+- Curios API
+- GeckoLib
+
+**Forge 1.20.1**
+- Forge 47.4.10+
+- SuperbWarfare 0.8.9+
+- Curios API
+- GeckoLib
+
+**SuperbWarfare, Curios API, and GeckoLib are required for both versions.**
+This mod does not work standalone.
 
 ## Features
 - Compact tripod-mounted sentry turrets. Original models, not present in vanilla SuperbWarfare
@@ -22,20 +36,27 @@ turret types are planned for later, heavier progression.
 - Custom crafting recipes using SuperbWarfare parts
 
 ## Installation
-1. Install NeoForge for Minecraft 1.21.1
+1. Install the correct loader (NeoForge or Forge) matching the version you pick
 2. Install [SuperbWarfare](https://modrinth.com/mod/superb-warfare) first
-3. Drop this mod's jar into your `mods` folder
+3. Install Curios API and GeckoLib
+4. Drop this mod's jar into your `mods` folder
 
 ## Building from source
-This project depends on the SuperbWarfare jar as a local file dependency
-(`compileOnly files("libs/superbwarfare-0.8.9-final-mc1.21.1-9b5284f4.jar")`
-in `build.gradle`), it is not pulled from a Maven repository, so it is not
-included in this repository.
+This repository has two branches, one per loader:
+- `main` — NeoForge 1.21.1
+- `1.20.1-forge` — Forge 1.20.1
+
+Both depend on the SuperbWarfare jar as a local file dependency (see
+`compileOnly files(...)` in `build.gradle`), it is not pulled from a Maven
+repository, so it is not included in this repository.
 
 To build from source:
-1. Download SuperbWarfare 0.8.9 from [Modrinth](https://modrinth.com/mod/superb-warfare).
-2. Place the jar file in the `libs/` folder at the project root.
-3. Run the Gradle build as usual.
+1. Check out the branch matching the loader you want to build.
+2. Download the matching SuperbWarfare 0.8.9 build from
+   [Modrinth](https://modrinth.com/mod/superb-warfare) (NeoForge 1.21.1 or
+   Forge 1.20.1, matching the branch).
+3. Place the jar file in the `libs/` folder at the project root.
+4. Run the Gradle build as usual.
 
 ## License
 This mod's code is licensed under GPL-3.0 (see LICENSE), consistent with its
