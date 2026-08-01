@@ -30,7 +30,7 @@
       "Projectile": "superbwarfare:projectile",
       "AmmoType": "@RifleAmmo",
       "RPM": 600,
-      "Damage": 9.5,
+      "Damage": 6.5,
       "BypassesArmor": 0.3,
       "Velocity": 30,
       "Gravity": 0,
@@ -65,6 +65,7 @@
   },
   "HasLowHealthWarning": false,
   "SelfHurtPercent": 0,
+  "VehicleIcon": "mini_auto_turret:textures/vehicle_icon/turret_m60_icon.png",
   "VehicleContainerType": "Small",
   "EngineType": "Fixed",
   "Type": "Defense"
