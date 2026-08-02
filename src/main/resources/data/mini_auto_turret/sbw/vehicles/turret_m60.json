@@ -66,9 +66,9 @@
   "HasLowHealthWarning": false,
   "SelfHurtPercent": 0,
   "DestroyInfo": {
-    "ParticleType": "Medium",
-    "ExplosionDamage": 10,
-    "ExplosionRadius": 3,
+    "ParticleType": "Small",
+    "ExplosionDamage": 8,
+    "ExplosionRadius": 2,
     "ExplodeBlocks": false,
     "NoWreck": true
   },

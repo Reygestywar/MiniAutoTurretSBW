@@ -1,0 +1,17 @@
+[1mdiff --git a/src/main/resources/data/mini_auto_turret/sbw/vehicles/turret_m60.json b/src/main/resources/data/mini_auto_turret/sbw/vehicles/turret_m60.json[m
+[1mindex 7592ba6..e0fd717 100644[m
+[1m--- a/src/main/resources/data/mini_auto_turret/sbw/vehicles/turret_m60.json[m
+[1m+++ b/src/main/resources/data/mini_auto_turret/sbw/vehicles/turret_m60.json[m
+[36m@@ -66,9 +66,9 @@[m
+   "HasLowHealthWarning": false,[m
+   "SelfHurtPercent": 0,[m
+   "DestroyInfo": {[m
+[31m-    "ParticleType": "Medium",[m
+[31m-    "ExplosionDamage": 10,[m
+[31m-    "ExplosionRadius": 3,[m
+[32m+[m[32m    "ParticleType": "Small",[m
+[32m+[m[32m    "ExplosionDamage": 8,[m
+[32m+[m[32m    "ExplosionRadius": 2,[m
+     "ExplodeBlocks": false,[m
+     "NoWreck": true[m
+   },[m
