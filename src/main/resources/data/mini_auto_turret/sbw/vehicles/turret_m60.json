@@ -65,6 +65,13 @@
   },
   "HasLowHealthWarning": false,
   "SelfHurtPercent": 0,
+  "DestroyInfo": {
+    "ParticleType": "Medium",
+    "ExplosionDamage": 10,
+    "ExplosionRadius": 3,
+    "ExplodeBlocks": false,
+    "NoWreck": true
+  },
   "VehicleIcon": "mini_auto_turret:textures/vehicle_icon/turret_m60_icon.png",
   "VehicleContainerType": "Small",
   "EngineType": "Fixed",
