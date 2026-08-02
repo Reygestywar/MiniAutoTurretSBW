@@ -10,9 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -68,8 +66,6 @@ public class MiniAutoTurretMod {
         ITEMS.register(modBus);
         ENTITY_TYPES.register(modBus);
         CREATIVE_TABS.register(modBus);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         LOGGER.info("Mini Auto Turret Loaded.");
     }
