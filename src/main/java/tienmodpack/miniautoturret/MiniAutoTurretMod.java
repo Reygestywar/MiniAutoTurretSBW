@@ -1,5 +1,6 @@
 package tienmodpack.miniautoturret;
 
+import com.atsuishio.superbwarfare.entity.projectile.ProjectileEntity;
 import com.atsuishio.superbwarfare.item.container.ContainerBlockItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
@@ -12,7 +13,6 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -42,6 +42,17 @@ public class MiniAutoTurretMod {
                             .sized(0.8F, 0.8F)
                             .build("turret_m60"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<ProjectileEntity>> M60_TRACER =
+            ENTITY_TYPES.register("m60_tracer",
+                    () -> EntityType.Builder
+                            .<ProjectileEntity>of(ProjectileEntity::new, MobCategory.MISC)
+                            .sized(0.1F, 0.1F)
+                            .noSave()
+                            .fireImmune()
+                            .clientTrackingRange(64)
+                            .updateInterval(1)
+                            .build("m60_tracer"));
+
     public static final DeferredItem<TurretM60DeployerItem> TURRET_M60_DEPLOYER =
             ITEMS.register("turret_m60_deployer",
                     () -> new TurretM60DeployerItem(
@@ -66,8 +77,6 @@ public class MiniAutoTurretMod {
         ITEMS.register(modBus);
         ENTITY_TYPES.register(modBus);
         CREATIVE_TABS.register(modBus);
-
-        container.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         LOGGER.info("Mini Auto Turret Loaded.");
     }
