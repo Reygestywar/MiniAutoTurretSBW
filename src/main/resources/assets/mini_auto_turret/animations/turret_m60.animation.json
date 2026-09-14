@@ -4,7 +4,11 @@
     "animation.turret_m60.idle": {
       "loop": true,
       "animation_length": 4,
-      "bones": {}
+      "bones": {
+        "flare": {
+          "scale": [0, 0, 1]
+        }
+      }
     },
     "animation.turret_m60.fire": {
       "loop": false,

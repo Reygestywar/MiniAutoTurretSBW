@@ -87,7 +87,7 @@ dependencies {
 
     implementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.6"
 
-    compileOnly files("libs/superbwarfare-0.8.9-final-mc1.21.1-9b5284f4.jar")
+    compileOnly files("libs/superbwarfare-0.8.9.1-final-mc1.21.1-5b92ebe1.jar")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

@@ -1,7 +1,7 @@
 {
   "MaxHealth": 60,
   "KeepChunkLoaded": false,
-  "TurretPos": [0, 0.344, 0.125],
+  "TurretPos": [0, 0.344, -0.072],
   "TurretTurnSpeed": [25, 25],
   "TurretPitchRange": [-60, 80],
   "BarrelPos": [0, 0.234, 0],
@@ -14,7 +14,7 @@
     "Weapons": ["Main"]
   },
   "SeekInfo": {
-    "MinSeekRange": 0.5,
+    "MinSeekRange": 1,
     "MaxSeekRange": 32,
     "ChangeTargetTime": 40,
     "SeekIterative": 20,
@@ -57,7 +57,7 @@
       },
       "ShootPos": {
         "Transform": "Barrel",
-        "Positions": [[0, 0.06, 0.4]],
+        "Positions": [[0, 0.050, 0.30]],
         "Directions": ["Barrel"]
       },
       "SoundRadius": 24
