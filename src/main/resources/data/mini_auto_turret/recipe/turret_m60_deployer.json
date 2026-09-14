@@ -6,9 +6,9 @@
     "b": { "item": "superbwarfare:m_60" },
     "c": { "item": "minecraft:redstone" },
     "d": { "item": "superbwarfare:mortar_bipod" },
-    "e": { "tag": "superbwarfare:storage_blocks/steel" },
-    "f": { "tag": "superbwarfare:storage_blocks/steel" },
-    "g": { "tag": "superbwarfare:storage_blocks/steel" }
+    "e": { "item": "superbwarfare:steel_block" },
+    "f": { "item": "superbwarfare:steel_block" },
+    "g": { "item": "superbwarfare:steel_block" }
   },
   "pattern": [
     "ab ",
