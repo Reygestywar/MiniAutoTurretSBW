@@ -76,7 +76,7 @@ side="BOTH"
 modId="superbwarfare"
 type="required"
 reason="Mini Auto Turret is an addon that requires SuperbWarfare's vehicle and turret system."
-versionRange="[0.8.9,)"
+versionRange="[0.8.9.1,0.8.10)"
 ordering="AFTER"
 side="BOTH"
 
