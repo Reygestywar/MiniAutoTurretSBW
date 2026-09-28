@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "mini_auto_turret:turret_m60_deployer"
+      "item": "mini_auto_turret:turret_m60_deployer"
     },
     "title": {
       "translate": "advancements.mini_auto_turret.get_turret.title"

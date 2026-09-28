@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": { "item": "minecraft:comparator" },
+    "b": { "item": "superbwarfare:m_60" },
+    "c": { "item": "minecraft:redstone" },
+    "d": { "item": "superbwarfare:mortar_bipod" },
+    "e": { "item": "superbwarfare:steel_block" }
+  },
+  "pattern": [
+    "ab ",
+    "cd ",
+    "eee"
+  ],
+  "result": {
+    "item": "mini_auto_turret:turret_m60_deployer",
+    "count": 1
+  }
+}

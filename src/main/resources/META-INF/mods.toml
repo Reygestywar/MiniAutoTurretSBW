@@ -4,7 +4,7 @@ license="GPL-3.0"
 
 [[mods]]
 modId="mini_auto_turret"
-version="1.0.0"
+version="1.0.3"
 displayName="[SBW] Mini Auto Turret"
 description='''
 Adds a craftable M60 sentry turret. Requires SuperbWarfare.
