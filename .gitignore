@@ -44,3 +44,4 @@ repo/
 
 ### Local dependency jars ###
 libs/*.jar
+libs/*

@@ -9,16 +9,13 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 import tienmodpack.miniautoturret.entity.TurretM60Entity;
-import tienmodpack.miniautoturret.item.TurretM60DeployerItem;
 
 @Mod(MiniAutoTurretMod.MODID)
 public class MiniAutoTurretMod {
@@ -53,12 +50,6 @@ public class MiniAutoTurretMod {
                             .updateInterval(1)
                             .build("m60_tracer"));
 
-    public static final DeferredItem<TurretM60DeployerItem> TURRET_M60_DEPLOYER =
-            ITEMS.register("turret_m60_deployer",
-                    () -> new TurretM60DeployerItem(
-                            new Item.Properties().stacksTo(1)
-                    ));
-
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB =
             CREATIVE_TABS.register("main",
                     () -> CreativeModeTab.builder()
@@ -66,19 +57,15 @@ public class MiniAutoTurretMod {
                             .withTabsBefore(CreativeModeTabs.COMBAT)
                             .icon(() -> ContainerBlockItem.createInstance(TURRET_M60.get()))
                             .displayItems((parameters, output) -> {
-
                                 output.accept(ContainerBlockItem.createInstance(TURRET_M60.get()));
-
                             })
                             .build());
 
     public MiniAutoTurretMod(IEventBus modBus, ModContainer container) {
-
         ITEMS.register(modBus);
         ENTITY_TYPES.register(modBus);
         CREATIVE_TABS.register(modBus);
 
         LOGGER.info("Mini Auto Turret Loaded.");
     }
-
 }

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "mini_auto_turret:turret_m60_deployer"
+      "id": "superbwarfare:container"
     },
     "title": {
       "translate": "advancements.mini_auto_turret.get_turret.title"
@@ -20,7 +20,13 @@
       "conditions": {
         "items": [
           {
-            "items": ["mini_auto_turret:turret_m60_deployer"]
+            "items": ["superbwarfare:container"],
+            "components": {
+              "minecraft:block_entity_data": {
+                "id": "superbwarfare:container",
+                "EntityType": "mini_auto_turret:turret_m60"
+              }
+            }
           }
         ]
       }

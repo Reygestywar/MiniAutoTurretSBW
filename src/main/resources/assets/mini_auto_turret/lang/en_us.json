@@ -1,7 +1,6 @@
 {
   "entity.mini_auto_turret.turret_m60": "M60 Sentry Turret",
-  "item.mini_auto_turret.turret_m60_deployer": "M60 Sentry Turret",
-  "item.mini_auto_turret.turret_m60_deployer.desc": "Compact tripod-mounted M60. Feed it Rifle Ammo, activate with a Monitor, and let it do the talking.",
+  "item.mini_auto_turret.m60_sentry_turret": "M60 Sentry Turret",
   "itemGroup.mini_auto_turret.main": "Mini Auto Turret",
   "weapon.mini_auto_turret.m60": "M60 7.62mm",
 

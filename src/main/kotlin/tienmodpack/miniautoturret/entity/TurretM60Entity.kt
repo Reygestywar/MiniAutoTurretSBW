@@ -1,6 +1,7 @@
 package tienmodpack.miniautoturret.entity
 
 import com.atsuishio.superbwarfare.entity.vehicle.base.AutoAimableEntity
+import net.minecraft.core.BlockPos
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.level.Level
 import software.bernie.geckolib.animatable.GeoAnimatable
@@ -16,6 +17,7 @@ class TurretM60Entity(
 ) : AutoAimableEntity(type, level), GeoAnimatable {
 
     private val cache: AnimatableInstanceCache = GeckoLibUtil.createInstanceCache(this)
+    private var hasSnappedToCenter = false
 
     override fun registerControllers(data: AnimatableManager.ControllerRegistrar) {
         data.add(
@@ -41,5 +43,14 @@ class TurretM60Entity(
         super.tick()
         setDeltaMovement(0.0, 0.0, 0.0)
         noPhysics = true
+
+        if (!level().isClientSide && !hasSnappedToCenter && this.tickCount < 5) {
+            val blockPos = BlockPos.containing(this.x, this.y, this.z)
+            val centerX = blockPos.x + 0.5
+            val centerZ = blockPos.z + 0.5
+
+            this.moveTo(centerX, this.y, centerZ)
+            hasSnappedToCenter = true
+        }
     }
 }
